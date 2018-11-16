@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.jrgc.activemq</groupId>
+  <artifactId>active-mq</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>active-mq Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <build>
+    <finalName>active-mq</finalName>
+  </build>
+
+  <properties>
+        <mvn-repository.server.ip>10.105.101.127:8081</mvn-repository.server.ip>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>nexus</id>
+      <name>Team Nexus Repository</name>
+      <url>http://${mvn-repository.server.ip}/nexus/content/groups/public/</url>
+    </repository>
+    <repository>
+      <id>ufc-nexus-releases</id>
+      <name>Team Nexus Repository</name>
+      <url>http://${mvn-repository.server.ip}/nexus/content/repositories/releases</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+    </dependency>
+    <!--activemq jar-->
+    <dependency>
+       <groupId>org.apache.activemq</groupId>
+       <artifactId>activemq-all</artifactId>
+       <version>5.14.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.6</version>
+    </dependency>
+  </dependencies>
+
+</project>
